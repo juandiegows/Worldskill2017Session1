@@ -128,7 +128,7 @@ namespace Worldskill2017Session1.View
             {
                 int.TryParse(tableUser.CurrentRow.Cells[0].Value.ToString(), out int id);
                 Users users = model.Users.FirstOrDefault(u => u.ID == id);
-                Form formA = new ChangePassword(users) { StartPosition = FormStartPosition.CenterScreen };
+                Form formA = new ChangeRole(users) { StartPosition = FormStartPosition.CenterScreen };
                 this.Enabled = false;
                 formA.Show();
                 formA.FormClosed += (object s, FormClosedEventArgs e1) =>
@@ -137,6 +137,25 @@ namespace Worldskill2017Session1.View
                     FillUserTable();
                 };
             }
+        }
+
+        private void tableUser_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
+        {
+            if (tableUser.Rows[e.RowIndex].Cells[7].Value.ToString() == 0.ToString())
+            {
+                tableUser.Rows[e.RowIndex].DefaultCellStyle.BackColor = Color.Yellow;
+            }
+        }
+
+        private void tableUser_DataBindingComplete(object sender, DataGridViewBindingCompleteEventArgs e)
+        {
+
+           
+        }
+
+        private void tableUser_Validating(object sender, CancelEventArgs e)
+        {
+
         }
     }
 }

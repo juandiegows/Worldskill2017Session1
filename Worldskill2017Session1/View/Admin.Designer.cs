@@ -90,6 +90,9 @@
             this.tableUser.Name = "tableUser";
             this.tableUser.Size = new System.Drawing.Size(742, 245);
             this.tableUser.TabIndex = 37;
+            this.tableUser.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.tableUser_CellFormatting);
+            this.tableUser.DataBindingComplete += new System.Windows.Forms.DataGridViewBindingCompleteEventHandler(this.tableUser_DataBindingComplete);
+            this.tableUser.Validating += new System.ComponentModel.CancelEventHandler(this.tableUser_Validating);
             // 
             // cmbOffices
             // 

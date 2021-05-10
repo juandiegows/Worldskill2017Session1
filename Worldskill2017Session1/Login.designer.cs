@@ -70,7 +70,7 @@
             this.btnClose.Location = new System.Drawing.Point(195, 247);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(121, 31);
-            this.btnClose.TabIndex = 15;
+            this.btnClose.TabIndex = 4;
             this.btnClose.Text = "Cerrar";
             this.btnClose.UseVisualStyleBackColor = false;
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
@@ -81,7 +81,7 @@
             this.btnLogin.Location = new System.Drawing.Point(50, 247);
             this.btnLogin.Name = "btnLogin";
             this.btnLogin.Size = new System.Drawing.Size(121, 31);
-            this.btnLogin.TabIndex = 14;
+            this.btnLogin.TabIndex = 3;
             this.btnLogin.Text = "Entrar";
             this.btnLogin.UseVisualStyleBackColor = true;
             this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
@@ -91,7 +91,7 @@
             this.txtPassword.Location = new System.Drawing.Point(50, 179);
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.Size = new System.Drawing.Size(266, 27);
-            this.txtPassword.TabIndex = 13;
+            this.txtPassword.TabIndex = 2;
             this.txtPassword.UseSystemPasswordChar = true;
             // 
             // lblPassword
@@ -109,7 +109,7 @@
             this.txtUser.Location = new System.Drawing.Point(50, 111);
             this.txtUser.Name = "txtUser";
             this.txtUser.Size = new System.Drawing.Size(266, 27);
-            this.txtUser.TabIndex = 11;
+            this.txtUser.TabIndex = 1;
             // 
             // label2
             // 

@@ -15,9 +15,10 @@ namespace Worldskill2017Session1.View
     {
 
         private Users Usuario { get; set; }
-        public ChangeRole()
+        public ChangeRole(Users u)
         {
             InitializeComponent();
+            Usuario = u;
         }
 
         private void btnClose_Click(object sender, EventArgs e)
