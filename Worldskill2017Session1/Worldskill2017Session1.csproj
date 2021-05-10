@@ -124,6 +124,12 @@
     <Compile Include="View\ChangePassword.Designer.cs">
       <DependentUpon>ChangePassword.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\ChangeRole.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\ChangeRole.Designer.cs">
+      <DependentUpon>ChangeRole.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\Welcome.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -150,6 +156,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="View\ChangePassword.resx">
       <DependentUpon>ChangePassword.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\ChangeRole.resx">
+      <DependentUpon>ChangeRole.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\Welcome.resx">
       <DependentUpon>Welcome.cs</DependentUpon>
