@@ -75,5 +75,68 @@ namespace Worldskill2017Session1.View
             FillOfficesCombobox();
             FillUserTable();
         }
+
+       
+        private void cmbOffices_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            FillUserTable();
+        }
+
+        private void btnSuspendAccount_Click(object sender, EventArgs e)
+        {
+            using (Session1Entities model = new Session1Entities())
+            {
+                int.TryParse(tableUser.CurrentRow.Cells[0].Value.ToString(), out int id);
+                Users users = model.Users.FirstOrDefault(u => u.ID == id);
+                users.Active = 0;
+                model.Entry(users).State = System.Data.Entity.EntityState.Modified;
+                if (model.SaveChanges() > 0)
+                {
+                    MessageBox.Show("Se ha suspendido la cuenta");
+                    FillUserTable();
+                }
+                else
+                {
+                    MessageBox.Show("No Se suspendido la cuenta");
+                }
+            }
+        }
+
+        private void btnResetAccount_Click(object sender, EventArgs e)
+        {
+            using (Session1Entities model = new Session1Entities())
+            {
+                int.TryParse(tableUser.CurrentRow.Cells[0].Value.ToString(), out int id);
+                Users users = model.Users.FirstOrDefault(u => u.ID == id);
+                users.Active = 1;
+                model.Entry(users).State = System.Data.Entity.EntityState.Modified;
+                if (model.SaveChanges() > 0)
+                {
+                    MessageBox.Show("Se ha suspendido la cuenta");
+                    FillUserTable();
+                }
+                else
+                {
+                    MessageBox.Show("No Se suspendido la cuenta");
+                }
+            }
+        }
+
+        private void btnChangeRole_Click(object sender, EventArgs e)
+        {
+            using (Session1Entities model = new Session1Entities())
+            {
+                int.TryParse(tableUser.CurrentRow.Cells[0].Value.ToString(), out int id);
+                Users users = model.Users.FirstOrDefault(u => u.ID == id);
+                Form formA = new ChangePassword(users) { StartPosition = FormStartPosition.CenterScreen };
+                this.Enabled = false;
+                formA.Show();
+                formA.FormClosed += (object s, FormClosedEventArgs e1) =>
+                {
+                    this.Enabled = true;
+                    FillUserTable();
+                };
+            }
+        }
     }
 }

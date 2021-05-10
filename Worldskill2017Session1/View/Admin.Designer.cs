@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.button5 = new System.Windows.Forms.Button();
+            this.btnChangeRole = new System.Windows.Forms.Button();
             this.btnResetAccount = new System.Windows.Forms.Button();
             this.btnSuspendAccount = new System.Windows.Forms.Button();
             this.tableUser = new System.Windows.Forms.DataGridView();
@@ -40,17 +40,18 @@
             ((System.ComponentModel.ISupportInitialize)(this.tableUser)).BeginInit();
             this.SuspendLayout();
             // 
-            // button5
+            // btnChangeRole
             // 
-            this.button5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button5.Location = new System.Drawing.Point(559, 412);
-            this.button5.Margin = new System.Windows.Forms.Padding(5);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(203, 35);
-            this.button5.TabIndex = 40;
-            this.button5.Text = "Cambiar Rol";
-            this.button5.UseVisualStyleBackColor = true;
+            this.btnChangeRole.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnChangeRole.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnChangeRole.Location = new System.Drawing.Point(559, 412);
+            this.btnChangeRole.Margin = new System.Windows.Forms.Padding(5);
+            this.btnChangeRole.Name = "btnChangeRole";
+            this.btnChangeRole.Size = new System.Drawing.Size(203, 35);
+            this.btnChangeRole.TabIndex = 40;
+            this.btnChangeRole.Text = "Cambiar Rol";
+            this.btnChangeRole.UseVisualStyleBackColor = true;
+            this.btnChangeRole.Click += new System.EventHandler(this.btnChangeRole_Click);
             // 
             // btnResetAccount
             // 
@@ -63,6 +64,7 @@
             this.btnResetAccount.TabIndex = 39;
             this.btnResetAccount.Text = "Restablecer cuenta";
             this.btnResetAccount.UseVisualStyleBackColor = true;
+            this.btnResetAccount.Click += new System.EventHandler(this.btnResetAccount_Click);
             // 
             // btnSuspendAccount
             // 
@@ -75,6 +77,7 @@
             this.btnSuspendAccount.TabIndex = 38;
             this.btnSuspendAccount.Text = "Suspender cuenta";
             this.btnSuspendAccount.UseVisualStyleBackColor = true;
+            this.btnSuspendAccount.Click += new System.EventHandler(this.btnSuspendAccount_Click);
             // 
             // tableUser
             // 
@@ -95,6 +98,7 @@
             this.cmbOffices.Name = "cmbOffices";
             this.cmbOffices.Size = new System.Drawing.Size(229, 29);
             this.cmbOffices.TabIndex = 36;
+            this.cmbOffices.SelectedIndexChanged += new System.EventHandler(this.cmbOffices_SelectedIndexChanged);
             // 
             // lblOffices
             // 
@@ -148,7 +152,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(777, 461);
-            this.Controls.Add(this.button5);
+            this.Controls.Add(this.btnChangeRole);
             this.Controls.Add(this.btnResetAccount);
             this.Controls.Add(this.btnSuspendAccount);
             this.Controls.Add(this.tableUser);
@@ -170,7 +174,7 @@
 
         #endregion
 
-        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Button btnChangeRole;
         private System.Windows.Forms.Button btnResetAccount;
         private System.Windows.Forms.Button btnSuspendAccount;
         private System.Windows.Forms.DataGridView tableUser;
